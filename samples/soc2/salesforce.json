@@ -1,0 +1,12 @@
+{
+  "vendor": "Salesforce",
+  "report_type": "Type II",
+  "audit_age_months": 4,
+  "period_start": "January 1, 2024",
+  "period_end": "December 31, 2024",
+  "auditor": "KPMG",
+  "scope": ["security", "availability", "confidentiality"],
+  "exceptions": [],
+  "carve_outs": [],
+  "subservice_orgs": ["AWS"]
+}

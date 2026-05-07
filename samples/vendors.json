@@ -1,0 +1,60 @@
+{
+  "vendors": [
+    {
+      "name": "Salesforce",
+      "data_sensitivity": "PII",
+      "access_scope": "prod admin",
+      "criticality": "tier-0",
+      "encryption": {"in_transit": true, "at_rest": true, "customer_managed_keys": false, "key_rotation": true},
+      "iam": {"mfa_required": true, "sso": true, "rbac": true, "admin_count": 4, "offboarding_24h": true},
+      "incidents": {"breaches_5y": 0, "open_issues": 1, "mttd_hours": 18},
+      "subprocessors": {"disclosed": true, "high_risk_count": 0, "notification_30d": true},
+      "geo": {"processing_countries": ["US"], "data_residency_enforced": true},
+      "financial": {"rating": "publicly-traded-stable"},
+      "termination": {"data_deletion_certified": true, "transition_assistance_clause": true, "data_export_format": "JSON"},
+      "monitoring": {"siem_forward": true, "audit_log_access": true, "uptime_published": true, "status_page": true}
+    },
+    {
+      "name": "ScrappyAnalytics",
+      "data_sensitivity": "PII",
+      "access_scope": "prod source code secrets",
+      "criticality": "tier-2",
+      "encryption": {"in_transit": true, "at_rest": false, "customer_managed_keys": false, "key_rotation": false},
+      "iam": {"mfa_required": false, "sso": false, "rbac": false, "admin_count": 8, "offboarding_24h": false},
+      "incidents": {"breaches_5y": 1, "open_issues": 4, "mttd_hours": 96},
+      "subprocessors": {"disclosed": false, "high_risk_count": 0, "notification_30d": false},
+      "geo": {"processing_countries": ["US", "RU"], "data_residency_enforced": false},
+      "financial": {"rating": "below-investment"},
+      "termination": {"data_deletion_certified": false, "transition_assistance_clause": false, "data_export_format": "proprietary"},
+      "monitoring": {"siem_forward": false, "audit_log_access": false, "uptime_published": false, "status_page": false}
+    },
+    {
+      "name": "AWS",
+      "data_sensitivity": "PHI",
+      "access_scope": "prod admin secrets",
+      "criticality": "tier-0",
+      "encryption": {"in_transit": true, "at_rest": true, "customer_managed_keys": true, "key_rotation": true},
+      "iam": {"mfa_required": true, "sso": true, "rbac": true, "admin_count": 3, "offboarding_24h": true},
+      "incidents": {"breaches_5y": 0, "open_issues": 0, "mttd_hours": 6},
+      "subprocessors": {"disclosed": true, "high_risk_count": 0, "notification_30d": true},
+      "geo": {"processing_countries": ["US"], "data_residency_enforced": true},
+      "financial": {"rating": "fortune-500"},
+      "termination": {"data_deletion_certified": true, "transition_assistance_clause": true, "data_export_format": "open"},
+      "monitoring": {"siem_forward": true, "audit_log_access": true, "uptime_published": true, "status_page": true}
+    },
+    {
+      "name": "QuickbillSaaS",
+      "data_sensitivity": "financial",
+      "access_scope": "prod admin",
+      "criticality": "tier-1",
+      "encryption": {"in_transit": true, "at_rest": true, "customer_managed_keys": false, "key_rotation": false},
+      "iam": {"mfa_required": true, "sso": false, "rbac": true, "admin_count": 6, "offboarding_24h": false},
+      "incidents": {"breaches_5y": 0, "open_issues": 2, "mttd_hours": 36},
+      "subprocessors": {"disclosed": true, "high_risk_count": 1, "notification_30d": true},
+      "geo": {"processing_countries": ["US", "IN"], "data_residency_enforced": false},
+      "financial": {"rating": "investment-grade"},
+      "termination": {"data_deletion_certified": true, "transition_assistance_clause": false, "data_export_format": "CSV"},
+      "monitoring": {"siem_forward": false, "audit_log_access": true, "uptime_published": true, "status_page": true}
+    }
+  ]
+}

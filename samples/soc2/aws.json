@@ -1,0 +1,12 @@
+{
+  "vendor": "AWS",
+  "report_type": "Type II",
+  "audit_age_months": 3,
+  "period_start": "October 1, 2023",
+  "period_end": "September 30, 2024",
+  "auditor": "EY",
+  "scope": ["security", "availability", "confidentiality"],
+  "exceptions": [],
+  "carve_outs": [],
+  "subservice_orgs": []
+}
